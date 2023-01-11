@@ -1,0 +1,101 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Apartmani </title>
+	<script src="javascript/jquery-3.3.1.min.js"></script>
+	<script src="javascript/index.js"></script>
+	<script src="javascript/podesavanja.js"></script>
+	<script src="javascript/apartmaniPretraga.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	
+	<style type="text/css">
+ 		.topcorner{
+	   		position:absolute;
+	   		top:5;
+	   		right:5;
+  		}
+	</style>
+
+</head>
+<body>
+
+<form id="login_buttons" class="topcorner">
+	<button type="submit" id="prijava_button" class="btn1"> Prijava </button>
+	<button type="submit" id="registracija_button" class="btn2"> Registracija </button>
+</form>
+
+<div id="acc_buttons" class="topcorner">	
+	<button type="submit" id="odjava_btn" class="btn3"> Odjava </button> <br/>	
+	<button type='submit' id='nalog_btn' class="btn4"> Nalog </button> <br/>	
+</div>
+
+<h1> Apartmani</h1>
+
+<span id="pozdravPor"></span>
+
+<table id="apartmaniTabela" class="tabela1">
+	<thead>
+		<tr>
+			<td class="kolone"> # </td>
+			<td class="kolone"> Broj soba </td>
+			<td class="kolone"> Broj Gostiju </td>
+			<td class="kolone"> Lokacija </td>
+			<td class="kolone"> Domacin </td>
+			<td id="cena" class="kolone"> Cena Po Noci </td>
+		</tr>
+	</thead>
+	<tbody>
+
+	</tbody>
+</table>
+
+<br/>
+<button id="pretragaBtn" class="btn5"> Pretraga </button>
+
+<div id="pretraga">
+	<h3> Pretraga apartmana </h3>
+	<form>
+		<table>
+			<tr>
+				<td><label class="labele"> Tip apartmana: </label></td>
+				<td><select id="tip" class="combo">
+						<option value="nista"> </option>
+						<option value="Soba">Soba</option>
+						<option value="Ceo_apartman">Ceo apartman</option>				 
+					</select></td>
+				<td><label id="tipNijeOdabran" style="color:red" class="error2"> Izaberite tip apartmana! </label></td>
+			</tr>
+			<tr>
+				<td><label class="labele"> Broj soba: </label></td>
+				<td><input type="text" id="brSoba" class="polja" /></td>
+				<td><label id="brSobaPrazan" style="color:red" class="error"> Unesite odgovarajuću vrednost! </label></td>
+			</tr>
+			<tr>
+				<td><label class="labele"> Broj osoba: </label></td>
+				<td><input type="text" id="brOsoba" class="polja" /></td>	
+				<td><label id="brOsobaPrazan" style="color:red" class="error"> Unesite odgovarajuću vrednost! </label></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button id="pretrazi" class="btn6"> Pretraži </button></td>
+			</tr>
+			<tr>
+				<td> <label class="labele"> Filtriraj po tipu apartmana: </label></td>
+				<td> <select id='filtracijaTip' class="combo2">
+						<option> Soba </option>
+						<option> Ceo_apartman </option>
+					</select></td>
+			</tr>
+			<tr>
+				<td> <label class="labele"> Filtriraj po statusu apartmana: </label></td>
+				<td> <select id='filtracijaStatus' onchange=filtrirajStatus() class="combo2">
+						<option> Aktivno </option>
+						<option> Neaktivno </option>
+					</select></td>
+			</tr>
+		</table>
+	</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[ {
+    "korisnicko_ime": "domacin1",
+    "lozinka": "domacin1",
+    "ime": "Pera",
+    "prezime": "Peric",
+    "uloga": "Domacin",
+    "apartmani": []
+},{
+    "korisnicko_ime": "domacin2",
+    "lozinka": "domacin2",
+    "ime": "Mika",
+    "prezime": "Mikic",
+    "pol": "muski",
+    "uloga": "Domacin",
+    "apartmani": []
+},{
+    "korisnicko_ime": "domacin3",
+    "lozinka": "domacin3",
+    "ime": "Djoka",
+    "prezime": "Djokic",
+    "pol": "muski",
+    "uloga": "Domacin",
+    "apartmani": []
+} ]

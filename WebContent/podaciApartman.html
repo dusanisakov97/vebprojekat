@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title> Apartman </title>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <script src="javascript/podaciApartman.js"></script>
+    <link rel="stylesheet" href="css/podaciApartman.css"> 
+</head>
+<body>
+    <h2> Podaci o apartmanu </h2>
+
+    <form>
+        <table class='tabelica'>
+            <tr>
+                <td style="width: 10%" ><label> Status: </label>
+                <td><label id="statusLabela"><b><i></i></b></label><button id="promeniStatusBtn"> Promeni </button></td>
+            </tr>
+            <tr id='k'>
+                <td><label> Tip: </label></td>  
+            </tr>
+            <tr>
+                <td><label> Broj soba: </label>
+                <td><input type='text' id='brSoba' class="polja"><label style="color: red;" id="greskaBrSobaPor"> Polje prazno! </label></td>
+            </tr>
+            <tr>
+                <td><label> Broj gostiju: </label>
+                <td><input type='text' id='brGostiju' class="polja"><label style="color: red;" id="greskaBrGostijuPor"> Polje prazno! </label></td>
+            </tr>
+            <tr>
+                <td><label> Cena po noći: </label>
+                <td><input type='text' id='cena' class="polja"><label style="color: red;" id="greskaCenaPor"> Polje prazno! </label></td>
+            </tr>
+            <tr>
+                <td><label> Ulica i broj: </label>
+                <td><input type='text' id='ulica' class="polja"><label id="greskaUlica" style="color: red;"> Polje prazno!</label></td>
+            </tr>
+            <tr>
+                <td><label> Naseljeno mesto: </label>
+                <td><input type='text' id='mesto' oninput="sirinaDuzinaFunkcija()" class="polja"><label id="greskaMesto" style="color: red;"> Polje prazno! </label></td>
+            </tr>
+            <tr>
+                <td><label> Poštanski broj mesta: </label>
+                <td><input type='text' id='postanskiBroj' class="polja"><label id="greskaPostanskiBroj" style="color: red;"> Polje prazno! </label></td>
+            </tr>
+            <tr>
+                <td><label> Geografska širina: </label>
+                <td><label id="geoSirina"></label></td>
+            </tr>
+            <tr>
+                <td><label> Geografska dužina: </label>
+                <td><label id="geoDuzina"></label></td>
+            </tr>
+            <tr>
+                <td><label> Slika: </label>
+                <td><input id="slika" type="file" onchange="readURL(this);" class="fajl"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img  id="blah" src="#" alt="your image" style="height: 100px; width: 100px;" class="picture"/> </td>
+            </tr>
+        </table>
+
+        <h3 class="podnaslovi"> <i> Sadržaj apartmana </i></h3>
+        
+        <table id="tabelaSadrzaj">
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <br/><br/>
+        
+        <table>
+            <tr>
+                <td><button class="btn1" type="submit" id="izmeniApp"> Izmeni </button></td>
+                <td><button class="btn2" type="submit" id="odustani"> Odustani </button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
